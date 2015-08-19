@@ -1,0 +1,42 @@
+{
+  "name": "domowavez",
+  "version": "1.0.0",
+  "description": "UI interface for Razberry",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "colors": "^1.1.2",
+    "bower": "^1.4.1",
+    "express": "^4.13.3",
+    "http-server": "^0.6.1",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.37",
+    "karma-jasmine": "^0.3.6",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-junit-reporter": "^0.2.2",
+    "lodash": "^2.4.2",
+    "path": "^0.11.14",
+    "protractor": "^2.1.0",
+    "serve-static": "^1.10.0",
+    "shelljs": "^0.2.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manumouton/domowavez.git"
+  },
+  "author": "Manu Mouton <manumouton@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manumouton/domowavez/issues"
+  },
+  "homepage": "https://github.com/manumouton/domowavez#readme"
+}
