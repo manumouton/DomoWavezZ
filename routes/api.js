@@ -11,6 +11,20 @@ var _ = require('lodash'),
 var ID = 9;
 
 /**
+ * Get platform status
+ */
+exports.platformAvailability = function (req, res) {
+    return res.status(200);
+};
+
+/**
+ * Get namespaces
+ */
+exports.namespaces = function (req, res) {
+
+}
+
+/**
  * Fetch all movies
  * If category query is provided, fetch movies filtered by category
  */

@@ -22,12 +22,33 @@ app.get('/', function (req, res) {
 });
 
 // JSON API
-app.get('/server/api/movies', api.fetchMovies);
-app.get('/server/api/movies/:id', api.fetchMovie);
-app.get('/server/api/movies/:id/actors', api.fetchActorsOfMovie);
-app.post('/server/api/movies', api.addMovie);
-app.put('/server/api/movies', api.updateMovie);
-app.delete('/server/api/movies/:id', api.deleteMovie);
+app.get('/ZAutomation/api/v1/status', api.platformAvailability);
+app.get('/ZAutomation/api/v1/restart', api.platformAvailability);
+app.get('/ZAutomation/api/v1/namespaces', api.namespaces);
+app.get('/ZAutomation/api/v1/modules', api.platformAvailability);
+app.get('/ZAutomation/api/v1/instances', api.platformAvailability);
+app.post('/ZAutomation/api/v1/instances', api.platformAvailability);
+app.get('/ZAutomation/api/v1/instances/:instanceId', api.platformAvailability);
+app.put('/ZAutomation/api/v1/instances/:instanceId', api.platformAvailability);
+app.delete('/ZAutomation/api/v1/instances/:instanceId', api.platformAvailability);
+app.get('/ZAutomation/api/v1/devices{?since}', api.platformAvailability);
+app.get('/ZAutomation/api/v1/devices/:id', api.platformAvailability);
+app.put('/ZAutomation/api/v1/devices/:id', api.platformAvailability);
+app.get('/ZAutomation/api/v1/devices/:id/command/:command?:params', api.platformAvailability);
+app.get('/ZAutomation/api/v1/locations', api.platformAvailability);
+app.post('/ZAutomation/api/v1/locations', api.platformAvailability);
+app.get('/ZAutomation/api/v1/locations/:id', api.platformAvailability);
+app.put('/ZAutomation/api/v1/locations/:id', api.platformAvailability);
+app.delete('/ZAutomation/api/v1/locations/:id', api.platformAvailability);
+app.get('/ZAutomation/api/v1/profiles', api.platformAvailability);
+app.post('/ZAutomation/api/v1/profiles', api.platformAvailability);
+app.get('/ZAutomation/api/v1/profiles/:id', api.platformAvailability);
+app.put('/ZAutomation/api/v1/profiles/:id', api.platformAvailability);
+app.delete('/ZAutomation/api/v1/profiles/:id', api.platformAvailability);
+app.get('/ZAutomation/api/v1/notifications{?since}', api.platformAvailability);
+app.get('/ZAutomation/api/v1/notifications/:id', api.platformAvailability);
+app.put('/ZAutomation/api/v1/notifications/:id', api.platformAvailability);
+
 
 
 server.listen(app.get('port'), function() {
