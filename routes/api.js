@@ -21,8 +21,8 @@ exports.platformAvailability = function (req, res) {
  * Get namespaces
  */
 exports.namespaces = function (req, res) {
-
-}
+    return res.status(200);
+};
 
 /**
  * Fetch all movies
