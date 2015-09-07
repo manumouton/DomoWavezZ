@@ -16,7 +16,7 @@ And some Zwave or Zwave+ devices to test the good overall functionality of the p
 * [A TBK wall switch] (http://www.tkbhome.com/?cn-p-d-110.html)
 * [An Aeon Labs multisnsor 6] (http://aeotec.com/z-wave-sensor)
 
-### SOftware configuration
+### Software configuration
 
 #### Raspberry setup
 
@@ -37,3 +37,14 @@ The same command might be used to update your system to the last version.
 
 By default, the complete Razberry package is installed in /opt/z-way-server/. You can check other dependencies needed 
 [at this adress] (http://razberry.z-wave.me/install).
+
+Once everything has been installed and your pi has been rebooted, simply go to [http://find.zwave.me] (http://find.zwave.me)
+to go to yourPiIp:8084/ and to complete the setup. You'll be able to retrieve your Zwave ID (32202) and to define a new password.
+
+Once done, go back to [http://find.zwave.me] (http://find.zwave.me) and log in. You'll be automatically redirected to one of the default
+Zway.me web interface called "Smarthome".
+
+## Useful Urls
+
+* Razberry interface: [http://find.zwave.me] (http://find.zwave.me)
+* Razberry configuration (exposure to the internet, etc.): [yourIp:8084] (http://192.168.0.7:8084)
