@@ -1,4 +1,4 @@
-<!-- header-->
+<!-- Header-->
 <header class="page-header">
     <h1>{{"My_devices" | translate}}
         <small>({{devices.length}})</small>
@@ -7,17 +7,17 @@
 
 <!-- Action bar -->
 <section class="well form-inline">
-    <input class="span5" type="text" ng-model="search" placeholder="Rechercher">
+    <input class="span5" type="text" ng-model="search" placeholder='{{"search" | translate}}'>
     <section class="pull-right">
         <button class="btn btn-success" ng-click="tableView = !tableView"><i
-                ng-class="{'icon-th-list icon-white' : tableView == false , 'icon-th icon-white' : tableView == true }"></i>
+                ng-class="{'glyphicon glyphicon-th-list' : tableView == false , 'glyphicon glyphicon-th' : tableView == true }"></i>
         </button>
     </section>
 </section>
 
 
 <!-- Devices list -->
-<div ng-switch on="tableView" ng-init="tableView = false">
+<div ng-switch on="tableView" ng-init="tableView = true">
     <ul class="thumbnails" ng-switch-when="false">
         <li ng-repeat="device in devices | orderBy:tri:reverse | filter : search " class="span12">
             <div class="caption">
