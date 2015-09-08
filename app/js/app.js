@@ -1,5 +1,6 @@
 'use strict';
 
+//Define the angularjs module for the app
 var domoWaveZApp = angular.module('domoWaveZApp', ['ngRoute']);
 
 domoWaveZApp.config(function($routeProvider) {
