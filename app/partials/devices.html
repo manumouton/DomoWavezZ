@@ -1,0 +1,46 @@
+<!-- header-->
+<header class="page-header">
+    <h1>{{"My_devices" | translate}}
+        <small>{{devices.length}} {{"devices" | translate}}</small>
+    </h1>
+</header>
+
+<!-- Action bar -->
+<section class="well form-inline">
+    <input class="span5" type="text" ng-model="search" placeholder="Rechercher">
+    <section class="pull-right">
+        <button class="btn btn-success" ng-click="tableView = !tableView"><i
+                ng-class="{'icon-th-list icon-white' : tableView == false , 'icon-th icon-white' : tableView == true }"></i>
+        </button>
+    </section>
+</section>
+
+
+<!-- Devices list -->
+<div ng-switch on="tableView" ng-init="tableView = false">
+    <ul class="thumbnails" ng-switch-when="false">
+        <li ng-repeat="device in devices | orderBy:tri:reverse | filter : search " class="span12">
+            <div class="caption">
+                <p><b>Device type : </b>{{device.deviceType}}</p>
+
+                <p><b>Title : </b>{{device.metrics.title}}</p>
+            </div>
+        </li>
+    </ul>
+    <table class="table table-striped" ng-switch-default>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Device type</th>
+            <th>Title</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="movie in movies | orderBy:tri:reverse | filter : search ">
+            <td>{{$index + 1}}</td>
+            <td>{{device.deviceType}}</td>
+            <td>{{device.metrics.title}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -9,6 +9,10 @@ domoWaveZApp.config(function($routeProvider) {
             templateUrl: 'partials/home.html',
             controller : 'homeController'
         })
+        .when('/devices', {
+            templateUrl: 'partials/devices.html',
+            controller: 'devicesController'
+        })
         .otherwise({
             redirectTo: '/home'
         });

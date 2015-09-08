@@ -1,30 +1,12 @@
 "use strict";
 
 domoWaveZApp.factory("Services", function ($http) {
-    var API_URI = '/server/api/';
+    var API_URI = '/ZAutomation/api/v1/';
 
     return {
-
-        fetch : function() {
-            return $http.get(API_URI);
-        },
-
-        create : function(movie) {
-            return  $http.post(API_URI, movie);
-        },
-
-        remove  : function(id) {
-            return $http.delete(API_URI + '/' + id);
-        },
-
-        fetchOne : function(id) {
-            return $http.get(API_URI + '/' + id);
-        },
-
-        update : function(movie) {
-            return $http.put(API_URI, movie);
+        devices: function () {
+            return $http.get(API_URI + 'devices');
         }
-
     };
 
 });

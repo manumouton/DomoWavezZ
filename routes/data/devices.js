@@ -61,7 +61,8 @@ exports.devices = {
         }]
     },
     code: 200,
-    message: "200 OK", error: null
+    message: "200 OK",
+    error: null
 };
 
 exports.device1 = {
