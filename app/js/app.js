@@ -13,6 +13,30 @@ domoWaveZApp.config(function($routeProvider) {
             templateUrl: 'partials/devices.html',
             controller: 'devicesController'
         })
+        .when('/locations', {
+            templateUrl: 'partials/locations.html',
+            controller: 'locationsController'
+        })
+        .when('/namespaces', {
+            templateUrl: 'partials/namespaces.html',
+            controller: 'namespacesController'
+        })
+        .when('/notifications', {
+            templateUrl: 'partials/notifications.html',
+            controller: 'notificationsController'
+        })
+        .when('/profiles', {
+            templateUrl: 'partials/profiles.html',
+            controller: 'profilesController'
+        })
+        .when('/modules', {
+            templateUrl: 'partials/modules.html',
+            controller: 'modulesController'
+        })
+        .when('/instances', {
+            templateUrl: 'partials/instances.html',
+            controller: 'instancesController'
+        })
         .otherwise({
             redirectTo: '/home'
         });

@@ -27,10 +27,26 @@ app.get('/ZAutomation/api/v1/status', api.platformAvailability);
 // Devices
 app.get('/ZAutomation/api/v1/devices', api.fetchDevices);
 
+// Locations
+app.get('/ZAutomation/api/v1/locations', api.fetchLocations);
+
+// Notifications
+app.get('/ZAutomation/api/v1/notifications', api.fetchNotifications);
+
+// Profiles
+app.get('/ZAutomation/api/v1/profiles', api.fetchProfiles);
+
+// Instances
+app.get('/ZAutomation/api/v1/instances', api.fetchInstances);
+
+// Modules
+app.get('/ZAutomation/api/v1/modules', api.fetchModules);
+
+// Namespaces
+app.get('/ZAutomation/api/v1/namespaces', api.fetchNamespaces);
+
 //app.get('/ZAutomation/api/v1/restart', api.platformRestart);
 //app.get('/ZAutomation/api/v1/namespaces', api.namespaces);
-//app.get('/ZAutomation/api/v1/modules', api.modules);
-//app.get('/ZAutomation/api/v1/instances', api.instances);
 //app.post('/ZAutomation/api/v1/instances', api.instances);
 //app.get('/ZAutomation/api/v1/instances/:instanceId', api.platformAvailability);
 //app.put('/ZAutomation/api/v1/instances/:instanceId', api.platformAvailability);
@@ -38,17 +54,14 @@ app.get('/ZAutomation/api/v1/devices', api.fetchDevices);
 //app.get('/ZAutomation/api/v1/devices/:id', api.platformAvailability);
 //app.put('/ZAutomation/api/v1/devices/:id', api.platformAvailability);
 //app.get('/ZAutomation/api/v1/devices/:id/command/:command?:params', api.platformAvailability);
-//app.get('/ZAutomation/api/v1/locations', api.platformAvailability);
 //app.post('/ZAutomation/api/v1/locations', api.platformAvailability);
 //app.get('/ZAutomation/api/v1/locations/:id', api.platformAvailability);
 //app.put('/ZAutomation/api/v1/locations/:id', api.platformAvailability);
 //app.delete('/ZAutomation/api/v1/locations/:id', api.platformAvailability);
-//app.get('/ZAutomation/api/v1/profiles', api.platformAvailability);
 //app.post('/ZAutomation/api/v1/profiles', api.platformAvailability);
 //app.get('/ZAutomation/api/v1/profiles/:id', api.platformAvailability);
 //app.put('/ZAutomation/api/v1/profiles/:id', api.platformAvailability);
 //app.delete('/ZAutomation/api/v1/profiles/:id', api.platformAvailability);
-//app.get('/ZAutomation/api/v1/notifications{?since}', api.platformAvailability);
 //app.get('/ZAutomation/api/v1/notifications/:id', api.platformAvailability);
 //app.put('/ZAutomation/api/v1/notifications/:id', api.platformAvailability);
 

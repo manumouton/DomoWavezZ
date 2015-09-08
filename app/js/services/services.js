@@ -9,6 +9,21 @@ domoWaveZApp.factory("Services", function ($http) {
         },
         locations: function () {
             return $http.get(API_URI + 'locations');
+        },
+        namespaces: function () {
+            return $http.get(API_URI + 'namespaces');
+        },
+        notifications: function () {
+            return $http.get(API_URI + 'notifications');
+        },
+        profiles: function () {
+            return $http.get(API_URI + 'profiles');
+        },
+        instances: function () {
+            return $http.get(API_URI + 'instances');
+        },
+        modules: function () {
+            return $http.get(API_URI + 'modules');
         }
     };
 

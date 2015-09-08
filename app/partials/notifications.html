@@ -1,0 +1,40 @@
+<!-- Header-->
+<header class="page-header">
+    <h1>{{"My_notifications" | translate}}
+        <small>({{notifications.length}})</small>
+    </h1>
+</header>
+
+<!-- Action bar -->
+<section class="well form-inline">
+    <input class="span5" type="text" ng-model="search" placeholder='{{"search" | translate}}'>
+    <section class="pull-right">
+        <button class="btn btn-success" ng-click="tableView = !tableView"><i
+                ng-class="{'glyphicon glyphicon-th-list' : tableView == false , 'glyphicon glyphicon-th' : tableView == true }"></i>
+        </button>
+    </section>
+</section>
+
+
+<!-- Instances list -->
+<div ng-switch on="tableView" ng-init="tableView = true">
+    <ul ng-switch-when="false">
+        <li ng-repeat="notification in notifications | orderBy:tri:reverse | filter : search " class="span12">
+            <div class="caption">
+
+            </div>
+        </li>
+    </ul>
+    <table class="table table-striped" ng-switch-default>
+        <thead>
+        <tr>
+            <th>#</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="notification in notifications | orderBy:tri:reverse | filter : search ">
+            <td>{{$index + 1}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

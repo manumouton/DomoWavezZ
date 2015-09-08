@@ -25,6 +25,12 @@
 <script type="text/javascript" src="js/services/services.js"></script>
 <script type="text/javascript" src="js/controllers/homeController.js"></script>
 <script type="text/javascript" src="js/controllers/devicesController.js"></script>
+<script type="text/javascript" src="js/controllers/locationsController.js"></script>
+<script type="text/javascript" src="js/controllers/namespacesController.js"></script>
+<script type="text/javascript" src="js/controllers/notificationsController.js"></script>
+<script type="text/javascript" src="js/controllers/profilesController.js"></script>
+<script type="text/javascript" src="js/controllers/modulesController.js"></script>
+<script type="text/javascript" src="js/controllers/instancesController.js"></script>
 <script type="text/javascript" src="js/directives/directives.js"></script>
 
 <!-- barre de navigation -->
@@ -34,6 +40,12 @@
             <a class="navbar-brand" href="#/home">DomoWaveZ</a>
             <ul class="nav navbar-nav">
                 <li><a href="#/devices">Mes composants</a></li>
+                <li><a href="#/locations">Mes pièces</a></li>
+                <li><a href="#/instances">Mes instances</a></li>
+                <li><a href="#/modules">Mes modules</a></li>
+                <li><a href="#/namespaces">Mes namespaces</a></li>
+                <li><a href="#/notifications">Mes notifications</a></li>
+                <li><a href="#/profiles">Mes profils</a></li>
             </ul>
         </section>
     </div>
@@ -41,6 +53,5 @@
 
 <!-- partie principale -->
 <section class="container" ng-view></section>
-
 </body>
 </html>
