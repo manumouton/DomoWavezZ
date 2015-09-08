@@ -1,7 +1,29 @@
 /**
+ * GET /ZAutomation/api/v1/modules HTTP/1.1
  *
+ * {
+    "type": "object",
+    "required": true,
+    "properties": {
+        "error": {
+            "type": ["string", "null"],
+            "required": true
+        },
+        "data"
+            "type": ["array"],
+            "required": true
+        },
+        "code": {
+            "type": "integer",
+            "required": true
+        },
+        "message": {
+            "type": ["string", "null"],
+            "required": true
+        },
+    }
+ }
  */
-
 exports.modules = {
     data: [{
         dependencies: [],

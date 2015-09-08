@@ -18,7 +18,7 @@
 
 <!-- Devices list -->
 <div ng-switch on="tableView" ng-init="tableView = true">
-    <ul class="thumbnails" ng-switch-when="false">
+    <ul ng-switch-when="false">
         <li ng-repeat="device in devices | orderBy:tri:reverse | filter : search " class="span12">
             <div class="caption">
                 <p><b>{{"device_type" | translate}} : </b>{{device.deviceType | translate}}</p>

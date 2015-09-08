@@ -1,7 +1,8 @@
 "use strict";
 
 var _ = require('lodash'),
-    DEVICES = require('./data/devices').devices;
+    DEVICES = require('./data/devices').devices,
+    LOCATIONS = require('./data/locations').locations;
 
 /**
  * Get platform status
@@ -23,4 +24,12 @@ exports.namespaces = function (req, res) {
 exports.fetchDevices = function (req, res) {
     var devices = DEVICES;
     return res.json(devices);
+};
+
+/**
+ * Fetch all locations
+ */
+exports.fetchLocations = function (req, res) {
+    var locations = LOCATIONS;
+    return res.json(locations);
 };

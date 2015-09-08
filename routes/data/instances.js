@@ -1,5 +1,28 @@
 /**
+ * GET /ZAutomation/api/v1/instances HTTP/1.1
  *
+ * {
+    "type": "object",
+    "required": true,
+    "properties": {
+        "error": {
+            "type": ["string", "null"],
+            "required": true
+        },
+        "data"
+            "type": "array",
+            "required": true
+        },
+        "code": {
+            "type": ["integer", "null"],
+            "required": true
+        },
+        "message": {
+            "type": ["string", "null"],
+            "required": true
+        },
+    }
+ }
  */
 exports.instances = {
     data: [{

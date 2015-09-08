@@ -6,6 +6,9 @@ domoWaveZApp.factory("Services", function ($http) {
     return {
         devices: function () {
             return $http.get(API_URI + 'devices');
+        },
+        locations: function () {
+            return $http.get(API_URI + 'locations');
         }
     };
 

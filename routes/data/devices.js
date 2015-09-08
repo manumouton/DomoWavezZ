@@ -1,3 +1,48 @@
+/**
+ * /ZAutomation/api/v1/devices{?since}
+ *
+ * GET /ZAutomation/api/v1/devices?since=1387881635 HTTP/1.1
+ *
+ * 200 (OK)
+ * Content-Type: application/json
+ *
+ * {
+    "type": "object",
+    "required": true,
+    "properties": {
+        "error": {
+            "type": ["string", "null"],
+            "required": true
+        },
+        "data"
+            "type": "object",
+            "required": true,
+            "properties": {
+                "updateTime": {
+                    "type": "integer",
+                    "required": true
+                },
+                "structureChanged": {
+                    "type": "boolean",
+                    "required": true
+                },
+                "devices": {
+                    "type": "array",
+                    "required": true
+                }
+            }
+        },
+        "code": {
+            "type": ["integer", "null"],
+            "required": true
+        },
+        "message": {
+            "type": ["string", "null"],
+            "required": true
+        },
+    }
+ }
+ */
 exports.devices = {
     data: {
         structureChanged: true,

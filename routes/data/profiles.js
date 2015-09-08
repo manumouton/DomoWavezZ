@@ -1,3 +1,15 @@
+/**
+ * GET /ZAutomation/api/v1/profiles HTTP/1.1
+ *
+ * [{
+    "data":[
+        "{"id":1,"name":"Default","description":"This is default profile. Default profile created automatically.","widgets":[],"active":true}",
+    ],
+    "error": null,
+    "message": null,
+    "code": "200 OK"
+}]
+ */
 exports.profiles = {
     data: [{
         id: 1,
