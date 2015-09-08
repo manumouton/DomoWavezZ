@@ -1,7 +1,7 @@
 <!-- header-->
 <header class="page-header">
     <h1>{{"My_devices" | translate}}
-        <small>{{devices.length}} {{"devices" | translate}}</small>
+        <small>({{devices.length}})</small>
     </h1>
 </header>
 
@@ -21,9 +21,9 @@
     <ul class="thumbnails" ng-switch-when="false">
         <li ng-repeat="device in devices | orderBy:tri:reverse | filter : search " class="span12">
             <div class="caption">
-                <p><b>Device type : </b>{{device.deviceType}}</p>
+                <p><b>{{"device_type" | translate}} : </b>{{device.deviceType | translate}}</p>
 
-                <p><b>Title : </b>{{device.metrics.title}}</p>
+                <p><b>{{"device_title" | translate}} : </b>{{device.metrics.title}}</p>
             </div>
         </li>
     </ul>
@@ -31,14 +31,14 @@
         <thead>
         <tr>
             <th>#</th>
-            <th>Device type</th>
-            <th>Title</th>
+            <th>{{"device_type" | translate}}</th>
+            <th>{{"device_title" | translate}}</th>
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="movie in movies | orderBy:tri:reverse | filter : search ">
+        <tr ng-repeat="device in devices | orderBy:tri:reverse | filter : search ">
             <td>{{$index + 1}}</td>
-            <td>{{device.deviceType}}</td>
+            <td>{{device.deviceType | translate}}</td>
             <td>{{device.metrics.title}}</td>
         </tr>
         </tbody>

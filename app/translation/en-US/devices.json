@@ -1,4 +1,13 @@
 {
   "My_devices": "My devices",
-  "devices": "devices"
+  "device_type": "Type",
+  "device_title": "Name",
+  "battery": "Battery",
+  "doorlock": "Door lock",
+  "thermostat": "Thermostat",
+  "switchBinary": "Binary switch",
+  "switchMultilevel": "Multi level switch",
+  "sensorBinary": "Binary sensor",
+  "sensorMultilevel": "Multi level sensor",
+  "switchToggle": "Switch toggle"
 }

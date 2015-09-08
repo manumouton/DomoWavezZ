@@ -1,4 +1,13 @@
 {
   "My_devices": "Mes composants",
-  "devices": "composants"
+  "device_type": "Type",
+  "device_title": "Nom",
+  "battery": "Batterie",
+  "doorlock": "Fermeture porte",
+  "thermostat": "Thermostat",
+  "switchBinary": "Switch binaire",
+  "switchMultilevel": "Switch multi niveaux",
+  "sensorBinary": "Capteur binaire",
+  "sensorMultilevel": "Capteur multi niveaux",
+  "switchToggle": "Interrupteur"
 }
