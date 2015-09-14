@@ -36,22 +36,38 @@
 <script type="text/javascript" src="js/directives/directives.js"></script>
 
 <!-- barre de navigation -->
-<header class="navbar navbar-inverse navbar-fixed-top" ng-controller="navBarController">
-    <div class="navbar-inner">
-        <section class="container-fluid">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="navBarController">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-init="navCollapsed = true"
+                    ng-click="navCollapsed = !navCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" href="#/home">DomoWaveZ</a>
+        </div>
+        <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
             <ul class="nav navbar-nav">
                 <li><a href="#/devices">{{"My_devices" | translate}}</a></li>
                 <li><a href="#/locations">{{"My_locations" | translate}}</a></li>
-                <li><a href="#/instances">{{"My_instances" | translate}}</a></li>
-                <li><a href="#/modules">{{"My_modules" | translate}}</a></li>
-                <li><a href="#/namespaces">{{"My_namespaces" | translate}}</a></li>
                 <li><a href="#/notifications">{{"My_notifications" | translate}}</a></li>
-                <li><a href="#/profiles">{{"My_profiles" | translate}}</a></li>
+
+                <li dropdown>
+                    <a href="#" dropdown-toggle>{{"Others" | translate}} <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/instances">{{"My_instances" | translate}}</a></li>
+                        <li><a href="#/modules">{{"My_modules" | translate}}</a></li>
+                        <li><a href="#/namespaces">{{"My_namespaces" | translate}}</a></li>
+                        <li><a href="#/profiles">{{"My_profiles" | translate}}</a></li>
+                    </ul>
+                </li>
             </ul>
-        </section>
+        </div>
     </div>
-</header>
+</nav>
 
 <!-- partie principale -->
 <section class="container" ng-view></section>
