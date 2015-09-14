@@ -20,3 +20,7 @@ input::-webkit-inner-spin-button {
 .control-group .help-block {
     margin-left: 180px;
 }
+
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}

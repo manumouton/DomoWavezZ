@@ -1,7 +1,8 @@
 'use strict';
 
 //Define the angularjs module for the app
-var domoWaveZApp = angular.module('domoWaveZApp', ['ngRoute', 'ngSanitize', 'pascalprecht.translate', 'angularTranslateApp']);
+var domoWaveZApp = angular.module('domoWaveZApp', ['ngRoute', 'ngSanitize', 'ngAnimate',
+    'ui.bootstrap', 'pascalprecht.translate', 'angularTranslateApp']);
 
 domoWaveZApp.config(function($routeProvider) {
     $routeProvider
