@@ -49,7 +49,7 @@ angular.module('angularTranslateApp', ['pascalprecht.translate'])
             urlTemplate: '/translation/{lang}/{part}.json'
         });
 
-        $translateProvider.useSanitizeValueStrategy('sanitize');
+        $translateProvider.useSanitizeValueStrategy('escape');
 
         $translateProvider.preferredLanguage('fr-FR');
     });

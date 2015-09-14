@@ -24,6 +24,7 @@
 <!-- Own js files -->
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/services/services.js"></script>
+<script type="text/javascript" src="js/controllers/navBarController.js"></script>
 <script type="text/javascript" src="js/controllers/homeController.js"></script>
 <script type="text/javascript" src="js/controllers/devicesController.js"></script>
 <script type="text/javascript" src="js/controllers/locationsController.js"></script>
@@ -35,18 +36,18 @@
 <script type="text/javascript" src="js/directives/directives.js"></script>
 
 <!-- barre de navigation -->
-<header class="navbar navbar-inverse navbar-fixed-top">
+<header class="navbar navbar-inverse navbar-fixed-top" ng-controller="navBarController">
     <div class="navbar-inner">
         <section class="container-fluid">
             <a class="navbar-brand" href="#/home">DomoWaveZ</a>
             <ul class="nav navbar-nav">
-                <li><a href="#/devices">Mes composants</a></li>
-                <li><a href="#/locations">Mes pièces</a></li>
-                <li><a href="#/instances">Mes instances</a></li>
-                <li><a href="#/modules">Mes modules</a></li>
-                <li><a href="#/namespaces">Mes namespaces</a></li>
-                <li><a href="#/notifications">Mes notifications</a></li>
-                <li><a href="#/profiles">Mes profils</a></li>
+                <li><a href="#/devices">{{"My_devices" | translate}}</a></li>
+                <li><a href="#/locations">{{"My_locations" | translate}}</a></li>
+                <li><a href="#/instances">{{"My_instances" | translate}}</a></li>
+                <li><a href="#/modules">{{"My_modules" | translate}}</a></li>
+                <li><a href="#/namespaces">{{"My_namespaces" | translate}}</a></li>
+                <li><a href="#/notifications">{{"My_notifications" | translate}}</a></li>
+                <li><a href="#/profiles">{{"My_profiles" | translate}}</a></li>
             </ul>
         </section>
     </div>
