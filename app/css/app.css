@@ -24,3 +24,12 @@ input::-webkit-inner-spin-button {
 .nav, .pagination, .carousel, .panel-title a {
     cursor: pointer;
 }
+
+.device-grid {
+    display: inline;
+}
+
+.device-panel {
+    min-width: 300px;
+    width: 300px;
+}
