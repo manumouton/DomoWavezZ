@@ -36,7 +36,7 @@ domoWaveZApp.directive('deviceItem', function ($compile, TemplatesServices) {
         TemplatesServices.devicesTemplates().then(function (response) {
             var devicesTemplates = response.data;
             element.html(getTemplate(devicesTemplates, scope.$parent.device.deviceType));
-            $compile(element.contents())(scope);
+            $compile(element.contents())(scope.$parent);
         });
     };
 

@@ -1,10 +1,10 @@
 {
-  "battery": "<div>battery</div>",
-  "doorlock": "<div>doorlock</div>",
-  "thermostat": "<div>thermostat</div>",
-  "switchbinary": "<div>switchbinary</div>",
-  "switchmultilevel": "<div>switchmultilevel</div>",
-  "sensorbinary": "<div>sensorbinary</div>",
-  "sensormultilevel": "<div>sensormultilevel</div>",
-  "switchtoggle": "<div>switchtoggle</div>"
+  "battery": "<div class='caption'><p><b>{{'device_type' | translate}} : </b>{{device.deviceType | translate}}</p><p><b>{{'device_title' | translate}} : </b>{{device.metrics.title}}</p></div>",
+  "doorlock": "<div class='caption'><p><b>{{'device_type' | translate}} : </b>{{device.deviceType | translate}}</p><p><b>{{'device_title' | translate}} : </b>{{device.metrics.title}}</p></div>",
+  "thermostat": "<div class='caption'><p><b>{{'device_type' | translate}} : </b>{{device.deviceType | translate}}</p><p><b>{{'device_title' | translate}} : </b>{{device.metrics.title}}</p></div>",
+  "switchbinary": "<div class='caption'><p><b>{{'device_type' | translate}} : </b>{{device.deviceType | translate}}</p><p><b>{{'device_title' | translate}} : </b>{{device.metrics.title}}</p></div>",
+  "switchmultilevel": "<div class='caption'><p><b>{{'device_type' | translate}} : </b>{{device.deviceType | translate}}</p><p><b>{{'device_title' | translate}} : </b>{{device.metrics.title}}</p></div>",
+  "sensorbinary": "<div class='caption'><p><b>{{'device_type' | translate}} : </b>{{device.deviceType | translate}}</p><p><b>{{'device_title' | translate}} : </b>{{device.metrics.title}}</p></div>",
+  "sensormultilevel": "<div class='caption'><p><b>{{'device_type' | translate}} : </b>{{device.deviceType | translate}}</p><p><b>{{'device_title' | translate}} : </b>{{device.metrics.title}}</p></div>",
+  "switchtoggle": "<div class='caption'><p><b>{{'device_type' | translate}} : </b>{{device.deviceType | translate}}</p><p><b>{{'device_title' | translate}} : </b>{{device.metrics.title}}</p></div>"
 }
