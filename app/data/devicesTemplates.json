@@ -1,0 +1,10 @@
+{
+  "battery": "<div>battery</div>",
+  "doorlock": "<div>doorlock</div>",
+  "thermostat": "<div>thermostat</div>",
+  "switchbinary": "<div>switchbinary</div>",
+  "switchmultilevel": "<div>switchmultilevel</div>",
+  "sensorbinary": "<div>sensorbinary</div>",
+  "sensormultilevel": "<div>sensormultilevel</div>",
+  "switchtoggle": "<div>switchtoggle</div>"
+}
