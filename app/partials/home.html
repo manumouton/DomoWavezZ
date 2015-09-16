@@ -5,94 +5,132 @@
         <img src="img/angular-logo.png" width="200px" alt="AngularJS">
     </p>
 
-    <div class="device-grid">
-        <div class="device-panel panel panel-primary">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-comments fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="huge">26</div>
-                        <div>New Comments!</div>
-                    </div>
-                </div>
-            </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-
-        <div class="device-panel panel panel-green">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-tasks fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="huge">12</div>
-                        <div>New Tasks!</div>
+    <div class="device-grid container-fluid">
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="device-panel panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <i class="fa fa-battery-three-quarters fa-5x"></i>
+                            </div>
+                            <div class="col-xs-6">
+                                <h2>93 %</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <h3>Battery</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-
-        <div class="device-panel panel panel-yellow">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-shopping-cart fa-5x"></i>
+            <div class="col-xs-3">
+                <div class="device-panel panel panel-danger">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <i class="fa fa-key fa-5x"></i>
+                            </div>
+                            <div class="col-xs-6">
+                                <h2>93 %</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <h3>Doorlock</h3>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="huge">124</div>
-                        <div>New Orders!</div>
-                    </div>
-                </div>
-            </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="panel-footer">
+                            <span class="pull-right">
+                                <div class="btn-group" dropdown dropdown-append-to-body>
+                                    <button id="actionsDoorLock" type="button" class="btn" dropdown-toggle>
+                                        Actions <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="actionsDoorLock">
+                                        <li role="menuitem"><a href="#">Open</a></li>
+                                        <li role="menuitem"><a href="#">Close</a></li>
+                                    </ul>
+                                </div>
+                            </span>
 
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-
-        <div class="device-panel panel panel-red">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-support fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="huge">13</div>
-                        <div>Support Tickets!</div>
+                        <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+            <div class="col-xs-3">
+                <div class="device-panel panel panel-success">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <i class="fa fa-tachometer fa-5x"></i>
+                            </div>
+                            <div class="col-xs-6">
+                                <h2>21 °</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <h3>Thermostat</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                            <span class="pull-right">
+                                <div class="btn-group" dropdown dropdown-append-to-body>
+                                    <button id="actionsThermostat" type="button" class="btn" dropdown-toggle>
+                                        Actions <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="actionsThermostat">
+                                        <li role="menuitem"><a href="#">Set mode</a></li>
+                                        <li role="menuitem"><a href="#">Set temperature</a></li>
+                                    </ul>
+                                </div>
+                            </span>
 
-                    <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>
                 </div>
-            </a>
+            </div>
+            <div class="col-xs-3">
+                <div class="device-panel panel panel-warning">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <i class="fa fa-lightbulb-o fa-5x"></i>
+                            </div>
+                            <div class="col-xs-6">
+                                <h2>ON</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <h3>Switch binary</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                            <span class="pull-right">
+                                <div class="btn-group" dropdown dropdown-append-to-body>
+                                    <button id="actionsSwitchBinary" type="button" class="btn" dropdown-toggle>
+                                        Actions <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="actionsSwitchBinary">
+                                        <li role="menuitem"><a href="#">Switch on</a></li>
+                                        <li role="menuitem"><a href="#">Switch off</a></li>
+                                        <li role="menuitem"><a href="#">Update</a></li>
+                                    </ul>
+                                </div>
+                            </span>
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 
 </section>

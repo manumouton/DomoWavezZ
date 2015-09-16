@@ -17,7 +17,7 @@
 
 
 <!-- Devices list -->
-<div ng-switch on="tableView" ng-init="tableView = true">
+<div ng-switch on="tableView" ng-init="tableView = false">
 
     <device-item ng-repeat="device in devices | orderBy:tri:reverse | filter : search " device="device"
                  ng-switch-when="false"></device-item>

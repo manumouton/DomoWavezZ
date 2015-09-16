@@ -26,10 +26,9 @@ input::-webkit-inner-spin-button {
 }
 
 .device-grid {
-    display: inline;
+    display: float;
 }
 
 .device-panel {
-    min-width: 300px;
-    width: 300px;
+
 }
