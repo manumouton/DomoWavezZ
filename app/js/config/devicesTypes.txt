@@ -1,0 +1,39 @@
+battery
+    - battery
+
+doorlock
+    - door
+
+thermostat
+    - thermostat
+
+fan
+    - fan
+
+meter
+    - meter
+
+switchBinary:
+    - switch
+
+switchMultilevel
+    - multilevel
+
+switchMultilevel (Blinds)
+    -
+
+sensorBinary
+    - smoke
+    - co
+    - cooling
+    - door
+    - motion
+    - flood
+
+sensorMultilevel
+    - temperature
+    - luminosity
+    - energy
+    - humidity
+
+switchToggle
