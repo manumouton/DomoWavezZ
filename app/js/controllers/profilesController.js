@@ -1,9 +1,13 @@
 "use strict";
 
-domoWaveZApp.controller("profilesController", function ($scope, $translate, $translatePartialLoader, Services) {
-    Services.profiles().success(function (resp) {
-        $scope.profiles = resp.data;
-    });
+domoWaveZApp.controller("profilesController", function ($scope, $translate, $translatePartialLoader, ProfilesService) {
+    ProfilesService.fetchAll()
+        .success(function (resp) {
+            $scope.profiles = resp.data;
+        })
+        .error(function (resp) {
+            //TODO
+        });
 
     //Translations management
     $translatePartialLoader.addPart('profiles');
