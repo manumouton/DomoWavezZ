@@ -9,10 +9,6 @@ domoWaveZApp.controller("devicesController", function ($scope, $translate, $tran
             //TODO
         });
 
-    //Translations management
-    $translatePartialLoader.addPart('devices');
-    $translate.refresh();
-
     /* Functions for devices */
     /* Doorlock actions */
     /* Open doorlock */
@@ -188,5 +184,9 @@ domoWaveZApp.controller("devicesController", function ($scope, $translate, $tran
                 //TODO
             });
     };
+
+    //Translations management
+    $translatePartialLoader.addPart('devices');
+    $translate.refresh();
 
 });

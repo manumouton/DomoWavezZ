@@ -1,8 +1,21 @@
 'use strict';
 
 //Define the angularjs module for the app
-var domoWaveZApp = angular.module('domoWaveZApp', ['ngRoute', 'ngSanitize', 'ngAnimate',
-    'ui.bootstrap', 'pascalprecht.translate', 'angularTranslateApp']);
+var domoWaveZApp = angular
+    .module('domoWaveZApp',
+    ['ngRoute',
+        'ngSanitize',
+        'ngAnimate',
+        'ui.bootstrap',
+        'pascalprecht.translate',
+        'angularTranslateApp'
+    ])
+    .constant("CONFIG", {
+        "APP_NAME": "DomoWaveZ",
+        "APP_VERSION": "0.0.1",
+        "API_URI": "/ZAutomation/api/v1/",
+        "DATA_URI": "data/"
+    });
 
 domoWaveZApp.config(function($routeProvider) {
     $routeProvider

@@ -1,53 +1,48 @@
 "use strict";
 
-/**
- * Razberry API service
- */
-domoWaveZApp.constant('API_URI', '/ZAutomation/api/v1/');
-
-domoWaveZApp.factory("DevicesService", function ($http, API_URI) {
+domoWaveZApp.factory("DevicesService", function ($http, CONFIG) {
     return {
         fetchAll: function () {
-            return $http.get(API_URI + 'devices');
+            return $http.get(CONFIG.API_URI + 'devices');
         },
         fetchAllSince: function (sinceDate) {
-            return $http.get(API_URI + 'devices?since=' + sinceDate);
+            return $http.get(CONFIG.API_URI + 'devices?since=' + sinceDate);
         },
         fetchOne: function (id) {
-            return $http.get(API_URI + 'devices/' + id);
+            return $http.get(CONFIG.API_URI + 'devices/' + id);
         },
         update: function (id, device) {
-            return $http.put(API_URI + 'devices/' + id, device);
+            return $http.put(CONFIG.API_URI + 'devices/' + id, device);
         },
         open: function (id) {
-            return $http.get(API_URI + 'devices/' + id + '/command/open');
+            return $http.get(CONFIG.API_URI + 'devices/' + id + '/command/open');
         },
         close: function (id) {
-            return $http.get(API_URI + 'devices/' + id + '/command/close');
+            return $http.get(CONFIG.API_URI + 'devices/' + id + '/command/close');
         },
         on: function (id) {
-            return $http.get(API_URI + 'devices/' + id + '/command/on');
+            return $http.get(CONFIG.API_URI + 'devices/' + id + '/command/on');
         },
         off: function (id) {
-            return $http.get(API_URI + 'devices/' + id + '/command/off');
+            return $http.get(CONFIG.API_URI + 'devices/' + id + '/command/off');
         },
         min: function (id) {
-            return $http.get(API_URI + 'devices/' + id + '/command/min');
+            return $http.get(CONFIG.API_URI + 'devices/' + id + '/command/min');
         },
         max: function (id) {
-            return $http.get(API_URI + 'devices/' + id + '/command/max');
+            return $http.get(CONFIG.API_URI + 'devices/' + id + '/command/max');
         },
         updateCommand: function (id) {
-            return $http.get(API_URI + 'devices/' + id + '/command/update');
+            return $http.get(CONFIG.API_URI + 'devices/' + id + '/command/update');
         },
         exact: function (id, level) {
-            return $http.get(API_URI + 'devices/' + id + '/command/exact?level=' + level);
+            return $http.get(CONFIG.API_URI + 'devices/' + id + '/command/exact?level=' + level);
         },
         setMode: function (id, mode) {
-            return $http.get(API_URI + 'devices/' + id + '/command/setMode?mode=' + mode);
+            return $http.get(CONFIG.API_URI + 'devices/' + id + '/command/setMode?mode=' + mode);
         },
         setTemp: function (id, temp) {
-            return $http.get(API_URI + 'devices/' + id + '/command/setTemp?temp=' + temp);
+            return $http.get(CONFIG.API_URI + 'devices/' + id + '/command/setTemp?temp=' + temp);
         },
         /* TODO do not know yet how these are built */
         up: function (id) {
@@ -74,19 +69,19 @@ domoWaveZApp.factory("DevicesService", function ($http, API_URI) {
 /**
  * Device histories service
  */
-domoWaveZApp.factory("DeviceHistoriesService", function ($http, API_URI) {
+domoWaveZApp.factory("DeviceHistoriesService", function ($http, CONFIG) {
     return {
         fetchAll: function () {
-            return $http.get(API_URI + 'history');
+            return $http.get(CONFIG.API_URI + 'history');
         },
         fetchOne: function (id) {
-            return $http.get(API_URI + 'history/' + id);
+            return $http.get(CONFIG.API_URI + 'history/' + id);
         },
         fetchOneSince: function (id, sinceDate) {
-            return $http.get(API_URI + 'history/' + id + '?since=' + sinceDate);
+            return $http.get(CONFIG.API_URI + 'history/' + id + '?since=' + sinceDate);
         },
         update: function (id, notification) {
-            return $http.put(API_URI + 'notifications/' + id, notification);
+            return $http.put(CONFIG.API_URI + 'notifications/' + id, notification);
         }
     };
 });
@@ -94,22 +89,22 @@ domoWaveZApp.factory("DeviceHistoriesService", function ($http, API_URI) {
 /**
  * Service related to rooms
  */
-domoWaveZApp.factory("LocationsService", function ($http, API_URI) {
+domoWaveZApp.factory("LocationsService", function ($http, CONFIG) {
     return {
         fetchAll: function () {
-            return $http.get(API_URI + 'locations');
+            return $http.get(CONFIG.API_URI + 'locations');
         },
         fetchOne: function (id) {
-            return $http.get(API_URI + 'locations/' + id);
+            return $http.get(CONFIG.API_URI + 'locations/' + id);
         },
         update: function (id, location) {
-            return $http.put(API_URI + 'locations/' + id, location);
+            return $http.put(CONFIG.API_URI + 'locations/' + id, location);
         },
         create: function (location) {
-            return $http.post(API_URI + 'locations', location);
+            return $http.post(CONFIG.API_URI + 'locations', location);
         },
         delete: function (id) {
-            return $http.delete(API_URI + 'locations/' + id);
+            return $http.delete(CONFIG.API_URI + 'locations/' + id);
         }
     };
 });
@@ -117,13 +112,13 @@ domoWaveZApp.factory("LocationsService", function ($http, API_URI) {
 /**
  * Platform related service
  */
-domoWaveZApp.factory("PlatformService", function ($http, API_URI) {
+domoWaveZApp.factory("PlatformService", function ($http, CONFIG) {
     return {
         status: function () {
-            return $http.get(API_URI + 'status');
+            return $http.get(CONFIG.API_URI + 'status');
         },
         restart: function () {
-            return $http.get(API_URI + 'restart');
+            return $http.get(CONFIG.API_URI + 'restart');
         }
     };
 });
@@ -131,19 +126,19 @@ domoWaveZApp.factory("PlatformService", function ($http, API_URI) {
 /**
  * Notifications services
  */
-domoWaveZApp.factory("NotificationsService", function ($http, API_URI) {
+domoWaveZApp.factory("NotificationsService", function ($http, CONFIG) {
     return {
         fetchAll: function () {
-            return $http.get(API_URI + 'notifications');
+            return $http.get(CONFIG.API_URI + 'notifications');
         },
         fetchAllSince: function (sinceDate) {
-            return $http.get(API_URI + 'notifications?since=' + sinceDate);
+            return $http.get(CONFIG.API_URI + 'notifications?since=' + sinceDate);
         },
         fetchOne: function (id) {
-            return $http.get(API_URI + 'notifications/' + id);
+            return $http.get(CONFIG.API_URI + 'notifications/' + id);
         },
         update: function (id, notification) {
-            return $http.put(API_URI + 'notifications/' + id, notification);
+            return $http.put(CONFIG.API_URI + 'notifications/' + id, notification);
         }
     };
 });
@@ -151,22 +146,22 @@ domoWaveZApp.factory("NotificationsService", function ($http, API_URI) {
 /**
  * Service related to profiles
  */
-domoWaveZApp.factory("ProfilesService", function ($http, API_URI) {
+domoWaveZApp.factory("ProfilesService", function ($http, CONFIG) {
     return {
         fetchAll: function () {
-            return $http.get(API_URI + 'profiles');
+            return $http.get(CONFIG.API_URI + 'profiles');
         },
         fetchOne: function (id) {
-            return $http.get(API_URI + 'profiles/' + id);
+            return $http.get(CONFIG.API_URI + 'profiles/' + id);
         },
         update: function (id, profile) {
-            return $http.put(API_URI + 'profiles/' + id, profile);
+            return $http.put(CONFIG.API_URI + 'profiles/' + id, profile);
         },
         create: function (profile) {
-            return $http.post(API_URI + 'profiles', profile);
+            return $http.post(CONFIG.API_URI + 'profiles', profile);
         },
         delete: function (id) {
-            return $http.delete(API_URI + 'profiles/' + id);
+            return $http.delete(CONFIG.API_URI + 'profiles/' + id);
         }
     };
 });
@@ -174,22 +169,22 @@ domoWaveZApp.factory("ProfilesService", function ($http, API_URI) {
 /**
  * Service related to instances
  */
-domoWaveZApp.factory("InstancesService", function ($http, API_URI) {
+domoWaveZApp.factory("InstancesService", function ($http, CONFIG) {
     return {
         fetchAll: function () {
-            return $http.get(API_URI + 'instances');
+            return $http.get(CONFIG.API_URI + 'instances');
         },
         fetchOne: function (id) {
-            return $http.get(API_URI + 'instances/' + id);
+            return $http.get(CONFIG.API_URI + 'instances/' + id);
         },
         create: function (instance) {
-            return $http.post(API_URI + 'instances', instance);
+            return $http.post(CONFIG.API_URI + 'instances', instance);
         },
         update: function (id, instance) {
-            return $http.put(API_URI + 'instances/' + id, instance);
+            return $http.put(CONFIG.API_URI + 'instances/' + id, instance);
         },
         delete: function (id) {
-            return $http.delete(API_URI + 'instances/' + id);
+            return $http.delete(CONFIG.API_URI + 'instances/' + id);
         }
     };
 });
@@ -197,10 +192,10 @@ domoWaveZApp.factory("InstancesService", function ($http, API_URI) {
 /**
  * Service related to modules
  */
-domoWaveZApp.factory("ModulesService", function ($http, API_URI) {
+domoWaveZApp.factory("ModulesService", function ($http, CONFIG) {
     return {
         fetchAll: function () {
-            return $http.get(API_URI + 'modules');
+            return $http.get(CONFIG.API_URI + 'modules');
         }
     };
 });
@@ -208,10 +203,10 @@ domoWaveZApp.factory("ModulesService", function ($http, API_URI) {
 /**
  * Service related to namespaces
  */
-domoWaveZApp.factory("NamespacesService", function ($http, API_URI) {
+domoWaveZApp.factory("NamespacesService", function ($http, CONFIG) {
     return {
         fetchAll: function () {
-            return $http.get(API_URI + 'namespaces');
+            return $http.get(CONFIG.API_URI + 'namespaces');
         }
     };
 });
@@ -219,12 +214,10 @@ domoWaveZApp.factory("NamespacesService", function ($http, API_URI) {
 /**
  * Templates service providing different items templates stored in json file
  */
-domoWaveZApp.constant('DATA_URI', 'data/');
-
-domoWaveZApp.factory("TemplatesServices", function ($http, DATA_URI) {
+domoWaveZApp.factory("TemplatesServices", function ($http, CONFIG) {
     return {
         devicesTemplates: function () {
-            return $http.get(DATA_URI + 'devicesTemplates.json');
+            return $http.get(CONFIG.DATA_URI + 'devicesTemplates.json');
         }
     };
 });
