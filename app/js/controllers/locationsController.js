@@ -2,11 +2,8 @@
 
 domoWaveZApp.controller("locationsController", function ($scope, $translate, $translatePartialLoader, LocationsService) {
     LocationsService.fetchAll()
-        .success(function (resp) {
+        .then(function (resp) {
             $scope.locations = resp.data;
-        })
-        .error(function (resp) {
-            //TODO
         });
 
     //Translations management

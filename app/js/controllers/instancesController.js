@@ -2,11 +2,8 @@
 
 domoWaveZApp.controller("instancesController", function ($scope, $translate, $translatePartialLoader, InstancesService) {
     InstancesService.fetchAll()
-        .success(function (resp) {
+        .then(function (resp) {
             $scope.instances = resp.data;
-        })
-        .error(function (resp) {
-            //TODO
         });
 
     //Translations management

@@ -2,11 +2,8 @@
 
 domoWaveZApp.controller("profilesController", function ($scope, $translate, $translatePartialLoader, ProfilesService) {
     ProfilesService.fetchAll()
-        .success(function (resp) {
+        .then(function (resp) {
             $scope.profiles = resp.data;
-        })
-        .error(function (resp) {
-            //TODO
         });
 
     //Translations management

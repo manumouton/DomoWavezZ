@@ -1,8 +1,7 @@
 'use strict';
 
 //Define the angularjs module for the app
-var domoWaveZApp = angular
-    .module('domoWaveZApp',
+var domoWaveZApp = angular.module('domoWaveZApp',
     ['ngRoute',
         'ngSanitize',
         'ngAnimate',
@@ -17,11 +16,11 @@ var domoWaveZApp = angular
         "DATA_URI": "data/"
     });
 
-domoWaveZApp.config(function($routeProvider) {
+domoWaveZApp.config(function ($routeProvider) {
     $routeProvider
         .when('/home', {
             templateUrl: 'partials/home.html',
-            controller : 'homeController'
+            controller: 'homeController'
         })
         .when('/devices', {
             templateUrl: 'partials/devices.html',
@@ -55,6 +54,23 @@ domoWaveZApp.config(function($routeProvider) {
             redirectTo: '/home'
         });
 });
+
+/**
+ * Global http interceptor
+ */
+angular.factory('httpInterceptor', function ($q, $injector) {
+        return {
+            // This is the responseError interceptor
+            responseError: function (response) {
+                $injector.get('$modal').open({
+                    template: '<h4>' + response.error + '</h4>'
+                });
+            }
+        }
+    }
+);
+
+domoWaveZApp.config($httpProvider.interceptors.push('httpInterceptor'));
 
 angular.module('angularTranslateApp', ['pascalprecht.translate'])
     .config(function ($translateProvider, $translatePartialLoaderProvider) {

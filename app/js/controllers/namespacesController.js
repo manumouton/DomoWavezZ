@@ -2,11 +2,8 @@
 
 domoWaveZApp.controller("namespacesController", function ($scope, $translate, $translatePartialLoader, NamespacesService) {
     NamespacesService.fetchAll()
-        .success(function (resp) {
+        .then(function (resp) {
             $scope.namespaces = resp.data;
-        })
-        .error(function (resp) {
-            //TODO
         });
 
     //Translations management
