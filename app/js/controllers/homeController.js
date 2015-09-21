@@ -6,5 +6,4 @@ domoWaveZApp.controller("homeController", function ($scope, $translate, $transla
     //Translations management
     $translatePartialLoader.addPart('home');
     $translate.refresh();
-
 });

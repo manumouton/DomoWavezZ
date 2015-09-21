@@ -22,6 +22,7 @@
 <script type="text/javascript" src="lib/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
 <!-- Angular bootstrap -->
 <script type="text/javascript" src="lib/angular-bootstrap/ui-bootstrap.js"></script>
+<script type="text/javascript" src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <!-- Own js files -->
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/config/config.js"></script>
@@ -36,8 +37,26 @@
 <script type="text/javascript" src="js/controllers/modulesController.js"></script>
 <script type="text/javascript" src="js/controllers/instancesController.js"></script>
 <script type="text/javascript" src="js/directives/devicesDirectives.js"></script>
+<script type="text/javascript" src="js/controllers/modalInstanceCtrl.js"></script>
 
-<!-- barre de navigation -->
+<!-- Modal to manage $http errors -->
+<script type="text/ng-template" id="httpModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Error {{code}}!</h3>
+    </div>
+    <div class="modal-body">
+        <p>Error {{code}}</p>
+
+        <p>{{error}}</p>
+
+        <p>{{message}}</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+    </div>
+</script>
+
+<!-- Navigation bar -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="navBarController">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -66,12 +85,13 @@
                         <li><a href="#/profiles">{{"My_profiles" | translate}}</a></li>
                     </ul>
                 </li>
+                <li>Platform: {{platformAvailable}}</li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- partie principale -->
+<!-- Main part -->
 <section class="container" ng-view></section>
 </body>
 </html>

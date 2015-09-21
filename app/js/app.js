@@ -58,19 +58,58 @@ domoWaveZApp.config(function ($routeProvider) {
 /**
  * Global http interceptor
  */
-angular.factory('httpInterceptor', function ($q, $injector) {
+domoWaveZApp.factory('httpInterceptor', function ($q, $injector) {
         return {
+            requestError: function (request) {
+                $injector.get('$modal').open({
+                    animation: true,
+                    controller: 'modalController',
+                    templateUrl: 'httpModal.html',
+                    resolve: {
+                        httpObject: function () {
+                            return request;
+                        }
+                    }
+                });
+            },
+            response: function (response) {
+                if (response.status == 200) {
+                    return response;
+                }
+                else {
+                    $injector.get('$modal').open({
+                        animation: true,
+                        controller: 'modalController',
+                        templateUrl: 'httpModal.html',
+                        resolve: {
+                            httpObject: function () {
+                                return response;
+                            }
+                        }
+                    });
+                }
+            },
             // This is the responseError interceptor
             responseError: function (response) {
+                $q.reject(response);
                 $injector.get('$modal').open({
-                    template: '<h4>' + response.error + '</h4>'
+                    animation: true,
+                    controller: 'modalController',
+                    templateUrl: 'httpModal.html',
+                    resolve: {
+                        httpObject: function () {
+                            return response;
+                        }
+                    }
                 });
             }
         }
     }
 );
 
-domoWaveZApp.config($httpProvider.interceptors.push('httpInterceptor'));
+domoWaveZApp.config(function ($httpProvider) {
+    $httpProvider.interceptors.push('httpInterceptor')
+});
 
 angular.module('angularTranslateApp', ['pascalprecht.translate'])
     .config(function ($translateProvider, $translatePartialLoaderProvider) {

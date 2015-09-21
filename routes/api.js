@@ -7,14 +7,16 @@ var _ = require('lodash'),
     INSTANCES = require('./data/instances').instances,
     MODULES = require('./data/modules').modules,
     NOTIFICATIONS = require('./data/notifications').notifications,
-    PROFILES = require('./data/profiles').profiles
+    PROFILES = require('./data/profiles').profiles,
+    STATUSUNAVAILABLE = require('./data/status').statusServiceUnAvailable
     ;
 
 /**
  * Get platform status
  */
 exports.platformAvailability = function (req, res) {
-    return res.status(200);
+    var status = STATUSUNAVAILABLE;
+    return res.jsonp(status);
 };
 
 /**
