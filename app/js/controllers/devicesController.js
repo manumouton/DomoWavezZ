@@ -3,7 +3,7 @@
 domoWaveZApp.controller("devicesController", function ($scope, $translate, $translatePartialLoader, DevicesService) {
     DevicesService.fetchAll()
         .then(function (resp) {
-            $scope.devices = resp.data.devices;
+            $scope.devices = resp.devices;
         });
 
     /* Functions for devices */

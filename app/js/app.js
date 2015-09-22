@@ -12,7 +12,7 @@ var domoWaveZApp = angular.module('domoWaveZApp',
     .constant("CONFIG", {
         "APP_NAME": "DomoWaveZ",
         "APP_VERSION": "0.0.1",
-        "API_URI": "/ZAutomation/api/v1/",
+        "API_URI": "http://admin:admin@192.168.0.7:8083/ZAutomation/api/v1/",
         "DATA_URI": "data/"
     });
 
